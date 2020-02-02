@@ -1,5 +1,6 @@
 
 const MAX_LIMIT = 15
+const db = wx.cloud.database()
 Page({
 
   /**
@@ -25,6 +26,7 @@ Page({
    */
   onLoad: function (options) {
     this._getPlaylist()
+    this._getSwiper()
   },
 
   /**
@@ -97,6 +99,14 @@ Page({
       })
       wx.stopPullDownRefresh()
       wx.hideLoading()
+    })
+  },
+
+  _getSwiper() {
+    db.collection('swiper').get().then((res) => {
+      this.setData({
+        swiperImgUrls: res.data
+      })
     })
   }
 })
