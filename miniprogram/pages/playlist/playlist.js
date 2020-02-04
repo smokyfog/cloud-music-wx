@@ -65,6 +65,7 @@ Page({
       playlist: []
     })
     this._getPlaylist()
+    this._getSwiper()
   },
 
   /**
@@ -104,6 +105,7 @@ Page({
 
   _getSwiper() {
     db.collection('swiper').get().then((res) => {
+      console.log('swiper', res)
       this.setData({
         swiperImgUrls: res.data
       })

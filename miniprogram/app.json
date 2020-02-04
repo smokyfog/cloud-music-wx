@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/playlist/playlist",
-    "pages/profile/profile",
     "pages/blog/blog",
     "pages/blog-edit/blog-edit",
-     "pages/demo/demo",
+    "pages/profile/profile",
+    "pages/demo/demo",
     "pages/musiclist/musiclist",
     "pages/player/player",
     "pages/blog-comment/blog-comment",
